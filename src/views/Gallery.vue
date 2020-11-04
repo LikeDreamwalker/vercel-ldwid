@@ -3,6 +3,11 @@
     <v-hover v-for="item in mainArray" :key="item.name">
       <template v-slot:default="{ hover }">
         <v-card color="#111111">
+          <p v-if="!status" class="d-flex align-center justify-center">
+            如果你看到这行文本，请尝试刷新该页面
+            <br />
+            这是一个原因不明的偶发跨域问题
+          </p>
           <v-row no-gutters>
             <v-col cols="12">
               <v-img
@@ -16,7 +21,7 @@
                 <v-overlay
                   v-if="hover"
                   absolute
-                  color="#FFFFFF00"
+                  color="#20202084"
                   style="backdrop-filter:blur(1rem)"
                 >
                   <v-btn

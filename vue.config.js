@@ -1,6 +1,7 @@
+const Timestamp = new Date().getTime();
 module.exports = {
   transpileDependencies: ["vuetify"],
-  publicPath: "./"
+  publicPath: "./",
   // chainWebpack: config => {
   //   // 移除 prefetch 插件
   //   config.plugins.delete("prefetch");
@@ -13,4 +14,12 @@ module.exports = {
   //   //   return options;
   //   // });
   // }
+  configureWebpack: {
+    // webpack 配置
+    output: {
+      // 输出重构  打包编译后的 文件名称  【模块名称.版本号.时间戳】
+      filename: `[name].${process.env.VUE_APP_Version}.${Timestamp}.js`,
+      chunkFilename: `[name].${process.env.VUE_APP_Version}.${Timestamp}.js`
+    }
+  }
 };
