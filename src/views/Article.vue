@@ -1,6 +1,11 @@
 <template>
   <div class="d-flex align-center justify-center" style="overflow-x: hidden;">
     <v-title>文章 - ldwid.com</v-title>
+    <p v-if="!status && timeout" class="d-flex justify-center">
+      如果你长时间看到这行文本，请尝试刷新该页面
+      <br />
+      这是一个原因不明的偶发跨域问题
+    </p>
     <v-card
       elevation="0"
       tile
@@ -219,7 +224,9 @@ export default {
     // 第二列的数组
     items2C: [],
     // 主数组，用于存储axios获取到的数据
-    mainArray: []
+    mainArray: [],
+    // timeout
+    timeout: false
   }),
   mounted() {
     //axios请求拦截器
@@ -283,6 +290,9 @@ export default {
         // 标识状态，确定数据已经加载完毕
         this.status = true;
       });
+    setTimeout(() => {
+      this.timeout = true;
+    }, 1500);
   },
   methods: {
     getDate: function(date) {

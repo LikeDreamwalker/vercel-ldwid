@@ -1,7 +1,8 @@
 <template>
   <div>
-    <p v-if="!status" class="d-flex justify-center">
-      如果你看到这行文本，请尝试刷新该页面
+    <v-title>文章 - ldwid.com</v-title>
+    <p v-if="!status && timeout" class="d-flex justify-center">
+      如果你长时间看到这行文本，请尝试刷新该页面
       <br />
       这是一个原因不明的偶发跨域问题
     </p>
@@ -52,7 +53,9 @@ export default {
     // mainArray
     mainArray: [],
     // overlay
-    overlay: false
+    overlay: false,
+    // timeout
+    timeout: false
   }),
   mounted() {
     //axios请求拦截器
@@ -75,6 +78,9 @@ export default {
       this.mainArray = response.data;
       this.status = true;
     });
+    setTimeout(() => {
+      this.timeout = true;
+    }, 1500);
   }
 };
 </script>
