@@ -14,7 +14,8 @@
                 : 'font-size:1rem'
             "
           >
-            ldwid.com部署于Github，基于Vue与Vuetify构建，并通过API由知乎托管创作内容，静态资源实现COS部署与CDN分发。
+            ldwid.com托管于Github，部署于Vercel，基于Vue2与Vuetify构建，通过COS与CDN托管静态资源并提供API，展示基于知乎的创作内容
+            <br />
             <v-btn
               text
               color="white"

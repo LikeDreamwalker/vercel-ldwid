@@ -55,6 +55,20 @@ export default {
     overlay: false
   }),
   mounted() {
+    //axios请求拦截器
+    Axios.interceptors.request.use(
+      config => {
+        if (/get/i.test(config.method)) {
+          //判断get请求
+          config.params = config.params || {};
+          config.params.t = Date.parse(new Date()) / 1000; //添加时间戳
+        }
+        return config;
+      },
+      error => {
+        return Promise.reject(error);
+      }
+    );
     Axios.get(
       "https://ldwid-1258491808.cos.ap-beijing.myqcloud.com/ldwid.com/gallery_index/gI.json"
     ).then(response => {
