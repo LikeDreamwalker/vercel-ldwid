@@ -14,6 +14,7 @@
               <v-img
                 :src="item.src"
                 :lazy-src="item.lazy_src"
+                width="100vw"
                 contain
                 gradient="to top, #00000040 0%, #00000000 5%, #00000000 95%, #00000040 100%"
               >
