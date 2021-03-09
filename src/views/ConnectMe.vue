@@ -1,18 +1,18 @@
 <template>
-  <div style="margin-top: -36px;overflow: hidden;">
+  <div style="margin-top: -36px; overflow: hidden">
     <v-title>交个朋友 - ldwid.com </v-title>
     <v-card
       flat
       tile
       color="#111111"
       :height="$vuetify.breakpoint.mdAndUp ? '100vh' : '100vh'"
-      style="overflow: hidden;"
+      style="overflow: hidden"
       class="d-flex justify-center align-center"
     >
       <v-row>
         <v-col
           :cols="$vuetify.breakpoint.mdAndUp ? '6' : '12'"
-          style="padding:0px"
+          style="padding: 0px"
           align-self="center"
         >
           <v-row class="d-flex justify-center">
@@ -22,7 +22,7 @@
                   ? 'font-size:4rem'
                   : 'font-size:2rem'
               "
-              style="letter-spacing:-0.2rem"
+              style="letter-spacing: -0.2rem"
             >
               <span class="font-weight-black font-italic primary--text"
                 >LIKE
@@ -46,7 +46,7 @@
             </v-col>
           </v-row>
           <v-row class="d-flex justify-center">
-            <v-btn text color="primary" style="font-size:1rem">
+            <v-btn text color="primary" style="font-size: 1rem">
               <a
                 target="_blank"
                 href="https://www.zhihu.com/people/likedreamwalker"
@@ -54,7 +54,7 @@
                 >访问我的知乎 〉
               </a>
             </v-btn>
-            <v-btn text color="primary" style="font-size:1rem">
+            <v-btn text color="primary" style="font-size: 1rem">
               <a
                 target="_blank"
                 href="https://github.com/LikeDreamwalker"
@@ -67,7 +67,7 @@
         <!-- img -->
         <v-col
           :cols="$vuetify.breakpoint.mdAndUp ? '6' : '12'"
-          style="padding:0px"
+          style="padding: 0px"
           align-self="center"
         >
           <v-row class="d-flex justify-center align-end">
@@ -77,7 +77,7 @@
               class="mt-5"
               contain
               :max-width="$vuetify.breakpoint.mdAndUp ? '30vw' : '60vw'"
-              style="border-radius:30%"
+              style="border-radius: 30%"
             >
             </v-img>
           </v-row>
