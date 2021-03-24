@@ -75,7 +75,6 @@
                   rounded
                   color="primary"
                   style="font-size: 1rem"
-                  to="meetLDW"
                   depressed
                   class="ma-1"
                   href="https://zhuanlan.zhihu.com/p/355716265"
@@ -89,7 +88,6 @@
                   rounded
                   color="primary"
                   style="font-size: 1rem"
-                  to="meetLDW"
                   depressed
                   class="ma-1"
                   href="https://lte.ldwid.com"
